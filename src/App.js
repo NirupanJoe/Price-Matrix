@@ -2,7 +2,7 @@ import { React, useEffect } from 'react';
 import './App.css';
 import context from './core/context';
 import SampleService from './services/sample';
-import SimpleButton from './components/simpleButton';
+import AddButton from './components/addButton';
 import ItemInput from './components/itemInput';
 import PriceInput from './components/priceInput';
 
@@ -14,7 +14,7 @@ const App = () => {
 	return (
 		<div className="App">
 			<div>{ ItemInput() } { PriceInput() }</div>
-			<div>{ SimpleButton() }</div>
+			<div>{ AddButton() }</div>
 			<div>Refresh ID: { context.state.refreshID }</div>
 		</div>
 	);

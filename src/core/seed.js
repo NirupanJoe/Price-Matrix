@@ -6,6 +6,7 @@ const seed = {
 	refreshID: rndString(refreshIDLength),
 	item: '',
 	price: '',
+	value: [],
 };
 
 export default seed;
