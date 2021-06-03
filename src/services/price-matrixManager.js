@@ -12,8 +12,11 @@ const addItemAndPrice = (
 ) =>
 	(item === '' || price === '' ? value : value.concat(getValue(item, price)));
 
+const getItem = (value) => value.length;
+
 const PriceMatrixManager = {
 	addItemAndPrice,
+	getItem,
 };
 
 export default PriceMatrixManager;
