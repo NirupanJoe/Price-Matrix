@@ -1,7 +1,7 @@
 import { React } from 'react';
 import context from '../core/context';
 import PriceMatrixManager from '../services/price-matrixManager';
-import items from './items';
+import MinAndMaxPrice from './minAndMaxPrice';
 
 const style = {
 	marginLeft: 'auto',
@@ -10,21 +10,21 @@ const style = {
 
 };
 
-const Item = () => {
-	const { value } = context.state;
-	const noDisplay = PriceMatrixManager.getItemCount(value) === 0;
+const MinAndMaxDisplay = () => {
+	const noDisplay = PriceMatrixManager
+		.getItemCount(context.state.value) === 0;
 
 	return noDisplay
 		? null
-		: <table style={ style }>
+		:	<table style={ style }>
 			<thead>
 				<tr>
-					<th>Name</th>
-					<th>Price</th>
+					<th colSpan="2">Minimum</th>
+					<th colSpan="2">Maximum</th>
 				</tr>
 			</thead>
-			{	value.map(items) }
+			{ MinAndMaxPrice() }
 		</table>;
 };
 
-export default Item;
+export default MinAndMaxDisplay;

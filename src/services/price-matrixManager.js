@@ -12,11 +12,21 @@ const addItemAndPrice = (
 ) =>
 	(item === '' || price === '' ? value : value.concat(getValue(item, price)));
 
-const getItem = (value) => value.length;
+const getItemCount = (value) => value.length;
+
+const getMin = (data) =>
+	data.reduce((accumulator, current) =>
+		(accumulator.price < current.price ? accumulator : current), {});
+
+const getMax = (data) =>
+	data.reduce((accumulator, current) =>
+		(accumulator.price > current.price ? accumulator : current), {});
 
 const PriceMatrixManager = {
 	addItemAndPrice,
-	getItem,
+	getItemCount,
+	getMin,
+	getMax,
 };
 
 export default PriceMatrixManager;
