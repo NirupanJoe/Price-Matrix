@@ -4,7 +4,7 @@ import config from '../core/config';
 const getValue = (item, price) => ({
 	id: rndString(config.refreshIDLength),
 	item: item,
-	price: price,
+	price: parseFloat(price),
 });
 
 const addItemAndPrice = (

@@ -5,6 +5,7 @@ import SampleService from './services/sample';
 import AddButton from './components/addButton';
 import ItemInput from './components/itemInput';
 import PriceInput from './components/priceInput';
+import Item from './components/item';
 
 const App = () => {
 	useEffect(SampleService.sayHai, []);
@@ -15,6 +16,7 @@ const App = () => {
 		<div className="App">
 			<div>{ ItemInput() } { PriceInput() }</div>
 			<div>{ AddButton() }</div>
+			<div>{ Item() }</div>
 			<div>Refresh ID: { context.state.refreshID }</div>
 		</div>
 	);
