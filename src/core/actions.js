@@ -15,8 +15,9 @@ const addPrice = ({ data }) => ({
 const addItemAndPrice = ({ state }) => ({
 	item: '',
 	price: '',
+	shopName: '',
 	value: PriceMatrixManager.addItemAndPrice(
-		state.value, state.item, state.price
+		state.value, state.item, state.price, state.shopName
 	),
 });
 

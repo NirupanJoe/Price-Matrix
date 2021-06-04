@@ -21,7 +21,8 @@ const Item = () => {
 		: <table style={ style }>
 			<thead>
 				<tr>
-					<th>Name</th>
+					<th>ShopName</th>
+					<th>Item</th>
 					<th>Price</th>
 				</tr>
 			</thead>

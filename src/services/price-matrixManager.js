@@ -1,16 +1,20 @@
 import { rndString } from '@laufire/utils/random';
 import config from '../core/config';
 
-const getValue = (item, price) => ({
+const getValue = (
+	item, price, shopName
+) => ({
 	id: rndString(config.refreshIDLength),
 	item: item,
 	price: parseFloat(price),
+	shopName: shopName,
 });
 
 const addItemAndPrice = (
-	value, item, price
-) =>
-	(item === '' || price === '' ? value : value.concat(getValue(item, price)));
+	value, item, price, shopName
+) => value.concat(getValue(
+	item, price, shopName
+));
 
 const getItemCount = (value) => value.length;
 

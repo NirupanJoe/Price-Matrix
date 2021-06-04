@@ -4,8 +4,7 @@ import PriceMatrixManager from '../services/price-matrixManager';
 import MinAndMaxPrice from './minAndMaxPrice';
 
 const style = {
-	width: '60%',
-	margin: 'auto',
+	width: '100%',
 
 };
 
@@ -18,8 +17,8 @@ const MinAndMaxDisplay = () => {
 		:	<table style={ style }>
 			<thead>
 				<tr>
-					<th colSpan="2">Minimum</th>
-					<th colSpan="2">Maximum</th>
+					<th colSpan="3">Minimum</th>
+					<th colSpan="3">Maximum</th>
 				</tr>
 			</thead>
 			{ MinAndMaxPrice() }

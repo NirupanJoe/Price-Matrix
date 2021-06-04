@@ -8,21 +8,17 @@ const style = {
 };
 
 const MinAndMaxPrice = () => {
-	const Minimum = PriceMatrixManager.getMin(context.state.value);
-	const Maximum = PriceMatrixManager.getMax(context.state.value);
+	const Min = PriceMatrixManager.getMin(context.state.value);
+	const Max = PriceMatrixManager.getMax(context.state.value);
 
 	return <tbody>
 		<tr style={ style }>
-			<td>Name</td>
-			<td>Price</td>
-			<td>Name</td>
-			<td>Price</td>
+			<td>ShopName</td><td>Item</td><td>Price</td>
+			<td>ShopName</td><td>Item</td><td>Price</td>
 		</tr>
 		<tr>
-			<td>{ Minimum.item }</td>
-			<td> { Minimum.price } </td>
-			<td>{ Maximum.item } </td>
-			<td> { Maximum.price } </td>
+			<td>{ Min.shopName }</td><td>{ Min.item }</td><td>{ Min.price }</td>
+			<td>{ Max.shopName }</td><td>{ Max.item }</td><td>{ Max.price }</td>
 		</tr>
 	</tbody>;
 };
