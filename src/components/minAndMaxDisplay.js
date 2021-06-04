@@ -4,9 +4,8 @@ import PriceMatrixManager from '../services/price-matrixManager';
 import MinAndMaxPrice from './minAndMaxPrice';
 
 const style = {
-	marginLeft: 'auto',
-	marginRight: 'auto',
-	border: '1px solid black',
+	width: '60%',
+	margin: 'auto',
 
 };
 

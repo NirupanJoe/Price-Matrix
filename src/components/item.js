@@ -7,6 +7,8 @@ const style = {
 	marginLeft: 'auto',
 	marginRight: 'auto',
 	border: '1px solid black',
+	width: '35%',
+	marginTop: '1rem',
 
 };
 
