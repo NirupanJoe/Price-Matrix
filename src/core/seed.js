@@ -4,6 +4,7 @@ const refreshIDLength = 4;
 
 const seed = {
 	refreshID: rndString(refreshIDLength),
+	shopName: '',
 	item: '',
 	price: '',
 	value: [],

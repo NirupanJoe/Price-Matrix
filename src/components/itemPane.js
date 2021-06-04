@@ -3,6 +3,7 @@ import AddButton from './addButton';
 import ItemInput from './itemInput';
 import PriceInput from './priceInput';
 import Item from './item';
+import ShopInput from './shopInput';
 
 const style = {
 	position: 'absolute',
@@ -15,8 +16,8 @@ const style = {
 
 const ItemPane = () =>
 	<div style={ style }>
-		<div>{ ItemInput() } { PriceInput() }</div>
-		<div>{ AddButton() }</div>
+		<div> { ShopInput() } { ItemInput() }</div>
+		<div> { PriceInput() } { AddButton() }</div>
 		<div> { Item() } </div>
 	</div>;
 

@@ -20,11 +20,16 @@ const addItemAndPrice = ({ state }) => ({
 	),
 });
 
+const addShopName = ({ data }) => ({
+	shopName: data,
+});
+
 const actions = {
 	increaseCount,
 	addItem,
 	addPrice,
 	addItemAndPrice,
+	addShopName,
 };
 
 export default actions;
