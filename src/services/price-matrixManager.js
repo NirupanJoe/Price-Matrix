@@ -34,8 +34,6 @@ const getMinAndMax = (items) => getProduct(items).map((product) => {
 	const shopItems = items
 		.filter((item) => item.product === product);
 
-	console.log(getProduct(items));
-
 	return {
 		product: product,
 		min: getMin(shopItems),

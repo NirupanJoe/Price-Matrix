@@ -1,6 +1,6 @@
 import { React } from 'react';
 import AddButton from './addButton';
-import ItemInput from './itemInput';
+import Product from './productInput';
 import PriceInput from './priceInput';
 import Item from './item';
 import ShopInput from './shopInput';
@@ -16,7 +16,7 @@ const style = {
 
 const ItemPane = () =>
 	<div style={ style }>
-		<div> { ShopInput() } { ItemInput() }</div>
+		<div> { ShopInput() } { Product() }</div>
 		<div> { PriceInput() } { AddButton() }</div>
 		<div> { Item() } </div>
 	</div>;

@@ -1,11 +1,8 @@
-import { rndString } from '@laufire/utils/random';
-
-const refreshIDLength = 4;
+import config from './config';
 
 const seed = {
-	refreshID: rndString(refreshIDLength),
-	shopName: '',
-	product: '',
+	shopName: config.shopNames[0],
+	product: config.products[0],
 	price: '',
 	item: [],
 };
