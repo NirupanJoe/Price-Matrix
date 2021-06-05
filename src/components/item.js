@@ -13,8 +13,8 @@ const style = {
 };
 
 const Item = () => {
-	const { value } = context.state;
-	const noDisplay = PriceMatrixManager.getItemCount(value) === 0;
+	const { item } = context.state;
+	const noDisplay = PriceMatrixManager.getItemCount(item) === 0;
 
 	return noDisplay
 		? null
@@ -22,11 +22,11 @@ const Item = () => {
 			<thead>
 				<tr>
 					<th>ShopName</th>
-					<th>Item</th>
+					<th>Product</th>
 					<th>Price</th>
 				</tr>
 			</thead>
-			{	value.map(items) }
+			{	item.map(items) }
 		</table>;
 };
 

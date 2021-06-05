@@ -1,12 +1,12 @@
 import { React } from 'react';
 
-const items = (value) => {
-	const { id, item, price, shopName } = value;
+const items = (item) => {
+	const { id, product, price, shopName } = item;
 
 	return <tbody key={ id }>
 		<tr>
 			<td>{ shopName }</td>
-			<td>{ item }</td>
+			<td>{ product }</td>
 			<td>{ price }</td>
 		</tr>
 	</tbody>;

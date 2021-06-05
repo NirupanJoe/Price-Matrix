@@ -5,7 +5,7 @@ const increaseCount = ({ state, data }) => ({
 });
 
 const addItem = ({ data }) => ({
-	item: data,
+	product: data,
 });
 
 const addPrice = ({ data }) => ({
@@ -13,11 +13,11 @@ const addPrice = ({ data }) => ({
 });
 
 const addItemAndPrice = ({ state }) => ({
-	item: '',
+	product: '',
 	price: '',
 	shopName: '',
-	value: PriceMatrixManager.addItemAndPrice(
-		state.value, state.item, state.price, state.shopName
+	item: PriceMatrixManager.addItemAndPrice(
+		state.item, state.product, state.price, state.shopName
 	),
 });
 

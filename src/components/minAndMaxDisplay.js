@@ -10,7 +10,7 @@ const style = {
 
 const MinAndMaxDisplay = () => {
 	const noDisplay = PriceMatrixManager
-		.getItemCount(context.state.value) === 0;
+		.getItemCount(context.state.item) === 0;
 
 	return noDisplay
 		? null

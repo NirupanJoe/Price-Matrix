@@ -1,6 +1,7 @@
 import { React } from 'react';
 import context from '../core/context';
 import PriceMatrixManager from '../services/price-matrixManager';
+import MinAndMaxProduct from './minAndMaxProduct';
 
 const style = {
 	fontWeight: 'bold',
@@ -8,19 +9,22 @@ const style = {
 };
 
 const MinAndMaxPrice = () => {
-	const Min = PriceMatrixManager.getMin(context.state.value);
-	const Max = PriceMatrixManager.getMax(context.state.value);
+	const minAndMax = PriceMatrixManager.getMinAndMax(context.state.item);
+	// const MinAndMaxProduct = minAndMax.map((item) => item);
+	// const { min, max } = MinAndMaxProduct;
 
 	return <tbody>
 		<tr style={ style }>
-			<td>ShopName</td><td>Item</td><td>Price</td>
-			<td>ShopName</td><td>Item</td><td>Price</td>
+			<td>Product</td><td>ShopName</td><td>Price</td>
+			<td>Product</td><td>ShopName</td><td>Price</td>
 		</tr>
-		<tr>
-			<td>{ Min.shopName }</td><td>{ Min.item }</td><td>{ Min.price }</td>
-			<td>{ Max.shopName }</td><td>{ Max.item }</td><td>{ Max.price }</td>
-		</tr>
+		{ minAndMax.map(MinAndMaxProduct)}
 	</tbody>;
 };
+
+// <tr>
+// 	<td>{min.shopName}</td><td>{min.product}</td><td>{min.price}</td>
+// 	<td>{max.shopName}</td><td>{max.product}</td><td>{max.price}</td>
+// </tr>
 
 export default MinAndMaxPrice;

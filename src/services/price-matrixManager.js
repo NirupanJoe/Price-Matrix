@@ -1,36 +1,54 @@
+/* eslint-disable no-console */
 import { rndString } from '@laufire/utils/random';
 import config from '../core/config';
 
 const getValue = (
-	item, price, shopName
+	product, price, shopName
 ) => ({
 	id: rndString(config.refreshIDLength),
-	item: item,
+	product: product,
 	price: parseFloat(price),
 	shopName: shopName,
 });
 
 const addItemAndPrice = (
-	value, item, price, shopName
-) => value.concat(getValue(
-	item, price, shopName
+	item, product, price, shopName
+) => item.concat(getValue(
+	product, price, shopName,
 ));
 
-const getItemCount = (value) => value.length;
+const getItemCount = (item) => item.length;
 
-const getMin = (data) =>
-	data.reduce((accumulator, current) =>
+const getMin = (item) =>
+	item.reduce((accumulator, current) =>
 		(accumulator.price < current.price ? accumulator : current), {});
 
-const getMax = (data) =>
-	data.reduce((accumulator, current) =>
+const getMax = (item) =>
+	item.reduce((accumulator, current) =>
 		(accumulator.price > current.price ? accumulator : current), {});
+
+const getProduct = (items) =>
+	[...new Set(items.map((item) => item.product))];
+
+const getMinAndMax = (items) => getProduct(items).map((product) => {
+	const shopItems = items
+		.filter((item) => item.product === product);
+
+	console.log(getProduct(items));
+
+	return {
+		product: product,
+		min: getMin(shopItems),
+		max: getMax(shopItems),
+	};
+});
 
 const PriceMatrixManager = {
 	addItemAndPrice,
 	getItemCount,
 	getMin,
 	getMax,
+	getMinAndMax,
 };
 
 export default PriceMatrixManager;
