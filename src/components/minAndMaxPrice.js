@@ -10,8 +10,6 @@ const style = {
 
 const MinAndMaxPrice = () => {
 	const minAndMax = PriceMatrixManager.getMinAndMax(context.state.item);
-	// const MinAndMaxProduct = minAndMax.map((item) => item);
-	// const { min, max } = MinAndMaxProduct;
 
 	return <tbody>
 		<tr style={ style }>
@@ -21,10 +19,5 @@ const MinAndMaxPrice = () => {
 		{ minAndMax.map(MinAndMaxProduct)}
 	</tbody>;
 };
-
-// <tr>
-// 	<td>{min.shopName}</td><td>{min.product}</td><td>{min.price}</td>
-// 	<td>{max.shopName}</td><td>{max.product}</td><td>{max.price}</td>
-// </tr>
 
 export default MinAndMaxPrice;

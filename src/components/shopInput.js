@@ -1,17 +1,16 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
 import { React } from 'react';
 import context from '../core/context';
-import ShopName from './shopName';
 
-const ShopInput = () => {
-	const { shopNames } = context.config;
+const ShopName = (shop) => <option key={ shop } value={ shop }>{shop}</option>;
 
-	return <div>Shop Name: <select
-		onChange={ (evt) => context.actions.addShopName(evt.target.value) }
-	                       >
-		 { shopNames.map(ShopName) }
-	</select>
-	</div>;
-};
+const ShopInput = () =>
+	<span>
+		<label> Shop Name: </label>
+		<select
+			onChange={ (evt) => context.actions.addShopName(evt.target.value) }
+		>
+			{ context.config.shopNames.map(ShopName) }
+		</select>
+	</span>;
 
 export default ShopInput;
