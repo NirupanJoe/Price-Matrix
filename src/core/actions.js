@@ -23,12 +23,29 @@ const addShopName = ({ data }) => ({
 	shopName: data,
 });
 
+const edit = ({ data }) => ({
+	shopName: data.shopName,
+	product: data.product,
+	price: data.price,
+	edit: data,
+});
+
+const editItem = ({ state }) => ({
+	price: '',
+	edit: null,
+	item: PriceMatrixManager.editItem(
+		state.item, state.shopName, state.product, state.price, state.edit
+	),
+});
+
 const actions = {
 	increaseCount,
 	addProduct,
 	addPrice,
 	addItemAndPrice,
 	addShopName,
+	edit,
+	editItem,
 };
 
 export default actions;

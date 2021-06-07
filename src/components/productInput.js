@@ -8,6 +8,7 @@ const productInput = () =>
 	<span>
 		<label> Product: </label>
 		<select
+			value={ context.state.product }
 			onChange={ (evt) => context.actions.addProduct(evt.target.value) }
 		>
 			{ context.config.products.map(Product) }

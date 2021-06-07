@@ -41,12 +41,25 @@ const getMinAndMax = (items) => getProduct(items).map((product) => {
 	};
 });
 
+const editItem = (
+	items, shopName, product, price, edit
+) => items.map((item) => (item.id === edit.id
+	? {
+		...item,
+		shopName: shopName,
+		product: product,
+		price: parseFloat(price),
+	}
+	: item
+));
+
 const PriceMatrixManager = {
 	addItemAndPrice,
 	getItemCount,
 	getMin,
 	getMax,
 	getMinAndMax,
+	editItem,
 };
 
 export default PriceMatrixManager;

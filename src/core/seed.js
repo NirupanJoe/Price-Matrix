@@ -5,6 +5,7 @@ const seed = {
 	product: config.products[0],
 	price: '',
 	item: [],
+	edit: null,
 };
 
 export default seed;
