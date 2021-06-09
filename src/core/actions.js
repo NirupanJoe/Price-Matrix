@@ -38,6 +38,14 @@ const editItem = ({ state }) => ({
 	),
 });
 
+const filterShop = ({ data }) => ({
+	filterShop: data,
+});
+
+const filterProduct = ({ data }) => ({
+	filterProduct: data,
+});
+
 const actions = {
 	increaseCount,
 	addProduct,
@@ -46,6 +54,8 @@ const actions = {
 	addShopName,
 	edit,
 	editItem,
+	filterShop,
+	filterProduct,
 };
 
 export default actions;

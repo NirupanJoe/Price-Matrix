@@ -13,7 +13,10 @@ const style = {
 };
 
 const Item = () => {
-	const { item } = context.state;
+	const { item, filterShop, filterProduct } = context.state;
+	const itemList = PriceMatrixManager.itemList(
+		item, filterShop, filterProduct
+	);
 	const noDisplay = PriceMatrixManager.getItemCount(item) === 0;
 
 	return noDisplay
@@ -26,7 +29,7 @@ const Item = () => {
 					<th>Price</th>
 				</tr>
 			</thead>
-			{	item.map(items) }
+			{	itemList.map(items) }
 		</table>;
 };
 

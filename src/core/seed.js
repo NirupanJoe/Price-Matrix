@@ -6,6 +6,8 @@ const seed = {
 	price: '',
 	item: [],
 	edit: null,
+	filterShop: 'All',
+	filterProduct: 'All',
 };
 
 export default seed;

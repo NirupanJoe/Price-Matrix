@@ -53,6 +53,16 @@ const editItem = (
 	: item
 ));
 
+const itemList = (
+	items, filterShop, filterProduct
+) => items.filter((item) => (filterShop === 'All'
+	? item
+	: item.shopName === filterShop
+)).filter((item) => (filterProduct === 'All'
+	? item
+	: item.product === filterProduct
+));
+
 const PriceMatrixManager = {
 	addItemAndPrice,
 	getItemCount,
@@ -60,6 +70,7 @@ const PriceMatrixManager = {
 	getMax,
 	getMinAndMax,
 	editItem,
+	itemList,
 };
 
 export default PriceMatrixManager;
