@@ -17,3 +17,13 @@ Features:
 	8. Filter the items, based on shops. Use a select box as the filter control.
 	9. Filter the items, based on product
 	10. Make the filters impact the price matrix too.
+
+	11.	Instead of having a separate table to show the max min values, use the table below the inputs and colour the values accordingly.
+
+	12.	Add another property to the items. Named quantity. Just like price. This too is a number.
+
+	13.	In the right pane create two inputs to collect "purchase" details from the user. These inputs are product and quantity. Save the purchases as a separate array in the state.
+
+	14.	Show all purchases in the right panel, below the inputs.
+
+	15.	Allow the user to edit purchases.
