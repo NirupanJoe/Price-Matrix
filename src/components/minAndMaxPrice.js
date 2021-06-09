@@ -9,7 +9,11 @@ const style = {
 };
 
 const MinAndMaxPrice = () => {
-	const minAndMax = PriceMatrixManager.getMinAndMax(context.state.item);
+	const { item, filterShop, filterProduct } = context.state;
+	const itemList = PriceMatrixManager.itemList(
+		item, filterShop, filterProduct
+	);
+	const minAndMax = PriceMatrixManager.getMinAndMax(itemList);
 
 	return <tbody>
 		<tr style={ style }>
