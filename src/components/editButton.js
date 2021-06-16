@@ -3,6 +3,7 @@ import context from '../core/context';
 
 const EditButton = () =>
 	<button
+		className="btn"
 		disabled={ context.state.edit === null }
 		onClick={ context.actions.editItem }
 	>

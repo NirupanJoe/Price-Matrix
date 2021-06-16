@@ -7,6 +7,7 @@ const ShopInput = () =>
 	<span>
 		<label> Shop Name: </label>
 		<select
+			className="select-input"
 			value={ context.state.shopName }
 			onChange={ (evt) => context.actions.addShopName(evt.target.value) }
 		>

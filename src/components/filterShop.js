@@ -18,6 +18,7 @@ const FilterShop = () => {
 		:	<div>
 			<label> Shop: </label>
 			<select
+				className="select-input"
 				value={ context.state.filterShop }
 				onChange={ (evt) => context.actions
 					.filterShop(evt.target.value) }

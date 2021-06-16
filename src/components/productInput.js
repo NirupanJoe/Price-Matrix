@@ -8,6 +8,7 @@ const productInput = () =>
 	<span>
 		<label> Product: </label>
 		<select
+			className="select-input"
 			value={ context.state.product }
 			onChange={ (evt) => context.actions.addProduct(evt.target.value) }
 		>

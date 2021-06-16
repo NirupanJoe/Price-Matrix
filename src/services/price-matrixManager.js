@@ -27,10 +27,10 @@ const getMax = (item) =>
 	item.reduce((accumulator, current) =>
 		(accumulator.price > current.price ? accumulator : current), {});
 
-const getProduct = (items) =>
+const getProducts = (items) =>
 	[...new Set(items.map((item) => item.product))];
 
-const getMinAndMax = (items) => getProduct(items).map((product) => {
+const getMinAndMax = (items) => getProducts(items).map((product) => {
 	const shopItems = items
 		.filter((item) => item.product === product);
 
