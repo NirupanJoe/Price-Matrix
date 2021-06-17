@@ -3,15 +3,6 @@ import context from '../core/context';
 import PriceMatrixManager from '../services/price-matrixManager';
 import items from './items';
 
-const style = {
-	marginLeft: 'auto',
-	marginRight: 'auto',
-	border: '1px solid black',
-	width: '35%',
-	marginTop: '1rem',
-
-};
-
 const Item = () => {
 	const { item, filterShop, filterProduct } = context.state;
 	const itemList = PriceMatrixManager.itemList(
@@ -21,7 +12,7 @@ const Item = () => {
 
 	return noDisplay
 		? null
-		: <table style={ style }>
+		: <table className="items-table">
 			<thead>
 				<tr>
 					<th>ShopName</th>

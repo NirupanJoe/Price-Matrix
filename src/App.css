@@ -38,6 +38,9 @@ input[type=number]::-webkit-outer-spin-button {
 	color: white;
 	padding: 3px 1px;
 }
+::placeholder {
+	color: white;
+}
 .btn {
 	border-radius: 15px;
 	padding: 6px 15px;
@@ -51,8 +54,25 @@ input[type=number]::-webkit-outer-spin-button {
 	background: #47c6c9;
 	border: 1px solid #ffff;
 }
-option:hover {
-	background: black;
+.items-table {
+	display: inline-table;
+	width: 50%;
+	border-collapse: collapse;
+}
+.items-table th, .items-table td {
+	border: 3px solid white;
+	padding: 5px 3px;
+}
+.items-table tr {
+	background: rgb(211, 210, 210);
+}
+.items-table th {
+	background: rgb(184, 184, 255);
+	color: rgb(58, 58, 223)
+}
+.items-table tr:hover {
+	background: rgb(170, 170, 170);
+	color: white;
 }
 .App-logo {
 	height: 40vmin;

@@ -8,6 +8,7 @@ const PriceInput = () =>
 			{' '}
 			<input
 				className="price-input"
+				placeholder="price"
 				type="number"
 				value={ context.state.price }
 				onChange={ (evt) => context.actions.addPrice(evt.target.value) }
