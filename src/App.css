@@ -82,9 +82,31 @@ input[type=number]::-webkit-outer-spin-button {
 	border-collapse: collapse;
 }
 .price-matrix-table th,.price-matrix-table td {
-	border: 2px solid blue;
+	border: 2px solid #005172;
 	padding: 12px 3px;
 }
+.price-matrix-table thead {
+	background: #ffc399;
+}
+.price-matrix-table tbody {
+	background: #ffd4fc;
+	color: #004da8;
+}
+.price-matrix-table tbody tr:hover {
+	background: #004da8;
+	color: #ffd4fc;
+}
+.price-matrix-table thead tr :first-child {
+	color:green;
+}
+.price-matrix-table thead tr :last-child {
+	color: red;
+}
+.price-matrix-table tbody tr:first-child {
+	color: white;
+	background: #4ea466;
+}
+
 .App-logo {
 	height: 40vmin;
 	pointer-events: none;
