@@ -3,18 +3,13 @@ import context from '../core/context';
 import PriceMatrixManager from '../services/price-matrixManager';
 import MinAndMaxPrice from './minAndMaxPrice';
 
-const style = {
-	width: '100%',
-
-};
-
 const MinAndMaxDisplay = () => {
 	const noDisplay = PriceMatrixManager
 		.getItemCount(context.state.item) === 0;
 
 	return noDisplay
 		? null
-		:	<table style={ style }>
+		:	<table className="price-matrix-table">
 			<thead>
 				<tr>
 					<th colSpan="3">Minimum</th>

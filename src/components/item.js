@@ -20,7 +20,7 @@ const Item = () => {
 					<th>Price</th>
 				</tr>
 			</thead>
-			{	itemList.map(items) }
+			<tbody>{	itemList.map(items) }</tbody>
 		</table>;
 };
 
