@@ -53,6 +53,7 @@ input[type=number]::-webkit-outer-spin-button {
 	color: #fff;
 	background: #47c6c9;
 	border: 1px solid #ffff;
+	transform: rotate(10deg);
 }
 .items-table {
 	display: inline-table;
