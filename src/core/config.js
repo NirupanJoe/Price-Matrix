@@ -6,6 +6,9 @@ const config = {
 	products: [
 		'Apple', 'Orange', 'Grapes', 'Mango',
 	],
+	themes: [
+		'light',	'dark',
+	],
 };
 
 export default config;

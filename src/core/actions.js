@@ -46,6 +46,10 @@ const filterProduct = ({ data }) => ({
 	filterProduct: data,
 });
 
+const themeSelect = ({ data }) => ({
+	theme: data,
+});
+
 const actions = {
 	increaseCount,
 	addProduct,
@@ -56,6 +60,7 @@ const actions = {
 	editItem,
 	filterShop,
 	filterProduct,
+	themeSelect,
 };
 
 export default actions;

@@ -8,6 +8,7 @@ const seed = {
 	edit: null,
 	filterShop: 'All',
 	filterProduct: 'All',
+	theme: config.themes[0],
 };
 
 export default seed;

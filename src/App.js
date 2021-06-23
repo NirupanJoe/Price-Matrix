@@ -11,7 +11,7 @@ const App = () => {
 	console.log(context.state);
 
 	return (
-		<div className="App">
+		<div className={ `App ${ context.state.theme }` }>
 			<div> { ItemPane() } </div>
 			<div> { PriceMatrix() } </div>
 		</div>

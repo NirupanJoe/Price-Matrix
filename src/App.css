@@ -1,13 +1,24 @@
 .App {
 	text-align: center;
 }
-.item-pane {
+#item-pane {
 	position: absolute;
 	top: 0;
 	left: 0;
 	min-height: 100%;
 	width: 50%;
+}
+.App.light {
+	color: black;
+}
+.App.dark {
+	color: white;
+}
+.light #item-pane{
 	background: #ffe7e7;
+}
+.dark #item-pane{
+	background: #ff8f45;
 }
 .price-matrix {
 	position: absolute;
