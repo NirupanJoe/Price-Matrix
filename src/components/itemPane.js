@@ -1,16 +1,13 @@
 import { React } from 'react';
-import Product from './productInput';
-import PriceInput from './priceInput';
 import Item from './item';
-import ShopInput from './shopInput';
-import ActionButton from './actionButton';
 import FilterShop from './filterShop';
 import ThemeSelect from './themeSelect';
+import { Box } from '@material-ui/core';
+import ItemInput from './itemInput';
 
 const ItemPane = () =>
 	<div id="item-pane">
-		<div> { ShopInput() } { Product() } { PriceInput() }
-			{ ActionButton() }</div>
+		<Box my={ 2 }> { ItemInput() }</Box>
 		<div> { Item() } </div>
 		<div> { FilterShop() } </div>
 		<div> { ThemeSelect() } </div>
