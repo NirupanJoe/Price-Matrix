@@ -1,18 +1,23 @@
+import { MenuItem, FormControl, Select, InputLabel } from '@material-ui/core';
 import { React } from 'react';
 import context from '../core/context';
 
-const ShopName = (shop) => <option key={ shop } value={ shop }>{shop}</option>;
+const ShopName = (shop) =>
+	<MenuItem key={ shop } value={ shop }>{shop}</MenuItem>;
 
 const ShopInput = () =>
-	<span>
-		<label> Shop Name: </label>
-		<select
-			className="select-input"
+
+	<FormControl variant="outlined">
+		<InputLabel id="demo-simple">ShopName</InputLabel>
+		<Select
+			labelId="demo-simple"
+			id="demo-simple-select-outlined"
 			value={ context.state.shopName }
 			onChange={ (evt) => context.actions.addShopName(evt.target.value) }
+			label="Shop Name"
 		>
 			{ context.config.shopNames.map(ShopName) }
-		</select>
-	</span>;
+		</Select>
+	</FormControl>;
 
 export default ShopInput;
