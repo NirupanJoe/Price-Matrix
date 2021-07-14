@@ -5,12 +5,20 @@ import ShopInput from './shopInput';
 import ActionButton from './actionButton';
 import { Grid } from '@material-ui/core';
 
-const ItemInput = () =>
-	<Grid container="true">
-		<Grid item="true" xs={ 3 }>{ ShopInput() }</Grid>
-		<Grid item="true" xs={ 3 }>{ Product() }</Grid>
-		<Grid item="true" xs={ 3 }>{ PriceInput() }</Grid>
-		<Grid item="true" xs={ 3 }>{ ActionButton() }</Grid>
+const GridItem = (component) =>
+	<Grid key={ component } item="true" xs={ 3 }>{ component }</Grid>;
+
+const ItemInput = () => {
+	const component = [
+		ShopInput(),
+		Product(),
+		PriceInput(),
+		ActionButton(),
+	];
+
+	return <Grid container="true">
+		{ component.map(GridItem)}
 	</Grid>;
+};
 
 export default ItemInput;
