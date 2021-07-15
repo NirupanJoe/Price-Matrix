@@ -10,7 +10,7 @@ const ItemPane = () =>
 		<Box my={ 2 }> { ItemInput() }</Box>
 		<div> { Item() } </div>
 		<Box my={ 2 }> { Filter() } </Box>
-		<div> { ThemeSelect() } </div>
+		<Box> { ThemeSelect() } </Box>
 	</div>;
 
 export default ItemPane;
