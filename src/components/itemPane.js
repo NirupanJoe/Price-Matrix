@@ -8,7 +8,7 @@ import ItemInput from './itemInput';
 const ItemPane = () =>
 	<div id="item-pane">
 		<Box my={ 2 }> { ItemInput() }</Box>
-		<div> { Item() } </div>
+		<Box> { Item() } </Box>
 		<Box my={ 2 }> { Filter() } </Box>
 		<Box> { ThemeSelect() } </Box>
 	</div>;

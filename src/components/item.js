@@ -1,27 +1,13 @@
-import { React } from 'react';
 import context from '../core/context';
 import PriceMatrixManager from '../services/price-matrixManager';
-import items from './items';
+import ItemTable from './itemTable';
 
 const Item = () => {
-	const { item, filterShop, filterProduct } = context.state;
-	const itemList = PriceMatrixManager.itemList(
-		item, filterShop, filterProduct
-	);
-	const noDisplay = PriceMatrixManager.getItemCount(item) === 0;
+	const noDisplay = PriceMatrixManager.getItemCount(context.state.item) === 0;
 
 	return noDisplay
 		? null
-		: <table className="items-table">
-			<thead>
-				<tr>
-					<th>ShopName</th>
-					<th>Product</th>
-					<th>Price</th>
-				</tr>
-			</thead>
-			<tbody>{	itemList.map(items) }</tbody>
-		</table>;
+		: ItemTable();
 };
 
 export default Item;

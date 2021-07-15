@@ -9,6 +9,9 @@ const config = {
 	themes: [
 		'light',	'dark',
 	],
+	tableHead: [
+		'ShopName', 'Product', 'Price',
+	],
 };
 
 export default config;
