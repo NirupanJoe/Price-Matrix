@@ -1,31 +1,27 @@
 import { React } from 'react';
+import { MenuItem, FormControl, Select, InputLabel } from '@material-ui/core';
 import context from '../core/context';
-import PriceMatrixManager from '../services/price-matrixManager';
-import FilterProduct from './filterProduct';
 
 const shopName = (shop) =>
-	<option key={ shop } value={ shop }>
+	<MenuItem key={ shop } value={ shop }>
 		{shop}
-	</option>;
+	</MenuItem>;
 
 const FilterShop = () => {
-	const noFilter = PriceMatrixManager.getItemCount(context.state.item) === 0;
-
 	const	filterShop = ['All', ...context.config.shopNames];
 
-	return noFilter
-		? null
-		:	<div>
-			<label> Shop: </label>
-			<select
-				className="select-input"
-				value={ context.state.filterShop }
-				onChange={ (evt) => context.actions
-					.filterShop(evt.target.value) }
-			>{ filterShop.map(shopName)}
-			</select>
-			{ FilterProduct() }
-		</div>;
+	return <FormControl variant="outlined">
+		<InputLabel id="demo-simple">ShopName</InputLabel>
+		<Select
+			labelId="demo-simple"
+			id="demo-simple-select-outlined"
+			label="Shop Name"
+			value={ context.state.filterShop }
+			onChange={ (evt) => context.actions
+				.filterShop(evt.target.value) }
+		>{ filterShop.map(shopName)}
+		</Select>
+	</FormControl>;
 };
 
 export default FilterShop;
