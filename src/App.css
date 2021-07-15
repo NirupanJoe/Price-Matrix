@@ -108,13 +108,13 @@ input[type=number]::-webkit-outer-spin-button {
 	background: #004da8;
 	color: #ffd4fc;
 }
-.price-matrix-table thead tr :first-child {
+.price-matrix-table thead tr :nth-child(1) {
 	color:green;
 }
-.price-matrix-table thead tr :last-child {
+.price-matrix-table thead tr :nth-child(2) {
 	color: red;
 }
-.price-matrix-table tbody tr:first-child {
+.price-matrix-table thead tr:last-child {
 	color: white;
 	background: #4ea466;
 }

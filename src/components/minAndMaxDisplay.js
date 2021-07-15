@@ -1,7 +1,6 @@
-import { React } from 'react';
 import context from '../core/context';
 import PriceMatrixManager from '../services/price-matrixManager';
-import MinAndMaxPrice from './minAndMaxPrice';
+import PriceMatrixTable from './priceMatrixTable';
 
 const MinAndMaxDisplay = () => {
 	const noDisplay = PriceMatrixManager
@@ -9,15 +8,7 @@ const MinAndMaxDisplay = () => {
 
 	return noDisplay
 		? null
-		:	<table className="price-matrix-table">
-			<thead>
-				<tr>
-					<th colSpan="3">Minimum</th>
-					<th colSpan="3">Maximum</th>
-				</tr>
-			</thead>
-			{ MinAndMaxPrice() }
-		</table>;
+		: PriceMatrixTable();
 };
 
 export default MinAndMaxDisplay;
