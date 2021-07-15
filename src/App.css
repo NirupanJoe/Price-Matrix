@@ -2,11 +2,7 @@
 	text-align: center;
 }
 #item-pane {
-	position: absolute;
-	top: 0;
-	left: 0;
 	min-height: 100%;
-	width: 50%;
 }
 .App.light {
 	color: black;
@@ -21,11 +17,7 @@
 	background: #ff8f45;
 }
 .price-matrix {
-	position: absolute;
-	top: 0;
-	right: 0;
 	min-height: 100%;
-	width: 50%;
 	background: #edffe7;
 }
 .select-input {
