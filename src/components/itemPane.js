@@ -5,12 +5,15 @@ import ThemeSelect from './themeSelect';
 import { Box } from '@material-ui/core';
 import ItemInput from './itemInput';
 
-const ItemPane = () =>
-	<div id="item-pane">
-		<Box my={ 2 }> { ItemInput() }</Box>
-		<Box> { Item() } </Box>
-		<Box my={ 2 }> { Filter() } </Box>
-		<Box> { ThemeSelect() } </Box>
-	</div>;
+const BoxComponent = (component) =>
+	<Box key={ component }my={ 2 }> {component}</Box>;
+
+const ItemPane = () => {
+	const components = [ItemInput(), Item(), Filter(), ThemeSelect()];
+
+	return <Box id="item-pane">
+		{components.map(BoxComponent)}
+	</Box>;
+};
 
 export default ItemPane;
