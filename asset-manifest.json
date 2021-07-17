@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/price-matrix/static/css/main.2c966452.chunk.css",
+    "main.js": "/price-matrix/static/js/main.aecdbb60.chunk.js",
+    "main.js.map": "/price-matrix/static/js/main.aecdbb60.chunk.js.map",
+    "runtime-main.js": "/price-matrix/static/js/runtime-main.072cfe48.js",
+    "runtime-main.js.map": "/price-matrix/static/js/runtime-main.072cfe48.js.map",
+    "static/js/2.d1d429bc.chunk.js": "/price-matrix/static/js/2.d1d429bc.chunk.js",
+    "static/js/2.d1d429bc.chunk.js.map": "/price-matrix/static/js/2.d1d429bc.chunk.js.map",
+    "static/js/3.638e16e3.chunk.js": "/price-matrix/static/js/3.638e16e3.chunk.js",
+    "static/js/3.638e16e3.chunk.js.map": "/price-matrix/static/js/3.638e16e3.chunk.js.map",
+    "index.html": "/price-matrix/index.html",
+    "static/css/main.2c966452.chunk.css.map": "/price-matrix/static/css/main.2c966452.chunk.css.map",
+    "static/js/2.d1d429bc.chunk.js.LICENSE.txt": "/price-matrix/static/js/2.d1d429bc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.072cfe48.js",
+    "static/js/2.d1d429bc.chunk.js",
+    "static/css/main.2c966452.chunk.css",
+    "static/js/main.aecdbb60.chunk.js"
+  ]
+}
